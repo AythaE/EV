@@ -13,3 +13,5 @@ Tras esto voy a intentar hacer la punta, para ello he alargado la sección super
 Para desarrollar la espada hay que hacer una extrusión de la sección biselada en el eje z de 24 unidades aprox. me he dado cuenta que igual que la punta no tiene sección biselada tampoco la base por ello cuando divido el cubo en 2 secciones perpendiculares deberia hacerlo en 3, crear la punta en la superior, la zona biselada en la intermedia y la zona de la base en la inferior. Usando la operación cortar y deslizar sobre un nuevo cubo lo divido en 3 secciones. y hago la punta en la superior con una altura de 8 unidades.
 
 Para respetar las proporciones de la imagen si he hecho la punta de 8 unidades y ocupa como 1/6 de la espada es necesario que el filo (sección intermedia) sea de 48 unidades en el eje Z. Una vez hecho el filo he decido realizar un _Scale_ en todos los ejes con la tecla S para que tenga una longitud de 10 en el eje de las Z (no son las mismas unidades)
+
+Para añadir la cruceta he creado un cubo en _Object Mode_ 
