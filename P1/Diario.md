@@ -14,16 +14,38 @@ Para desarrollar la espada hay que hacer una extrusión de la sección biselada 
 
 Para respetar las proporciones de la imagen si he hecho la punta de 8 unidades y ocupa como 1/6 de la espada es necesario que el filo (sección intermedia) sea de 48 unidades en el eje Z. Una vez hecho el filo he decido realizar un _Scale_ en todos los ejes con la tecla S para que tenga una longitud de 10 en el eje de las Z (no son las mismas unidades). El resultado de esto es el siguiente:
 
- ![Imagen Filo](Imgs/Filo.png "Imagen Filo")
+ ![Imagen Filo](doc_imgs/Filo.png "Imagen Filo")
 
-Para añadir la cruceta he pensado crear un cubo y luego deformarle las puntas pero no tengo muy claro como hacerlo, por ello he pensado en los perfiles de revolución, para ello me he servido de las indicaciones dadas en el guión de la práctica y del siguiente [tutorial](https://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/Creating_a_Simple_Hat). Siguiendo los pasos he creado el siguiente perfil de revolución:
+Para añadir la cruceta he pensado crear un cubo y luego deformarle las puntas pero no tengo muy claro como hacerlo, por ello he pensado en los perfiles de revolución, para ello me he servido de las indicaciones dadas en el guión de la práctica y del siguiente [tutorial](https://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/Creating_a_Simple_Hat). Siguiendo los pasos he creado el siguiente perfil de revolución en la capa 2:
 
- ![Imagen perfil revolución cruceta](Imgs/PerfilRevoluciónCruceta.png "Imagen perfil revolución cruceta")
+ ![Imagen perfil revolución cruceta](doc_imgs/PerfilRevoluciónCruceta.png "Imagen perfil revolución cruceta")
 
 Lo que usando la operación _Spin_ con todos los vértices seleccionados sobre el eje X con ángulo 360º y 6 caras genera el siguiente objeto:
 
-  ![Imagen cruceta](Imgs/Cruceta.png "Imagen cruceta")
+  ![Imagen cruceta](doc_imgs/Cruceta.png "Imagen cruceta")
 
 Como se puede ver los extremos no se han cerrado seguramente por un pequeño desajuste en el centro de la operación Spin.
 
 Hablando con compañeros parece que muchos han usado el [_Proportional Editing Mode_](https://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/Mesh_Edit_Mode#Proportional_Editing) que permite desplazar los vértices y que los de alrededor se adapten de manera más o menos orgánica/natural. Probablemente esto sirva para cerrar los extremos de la cruceta que habían quedado abiertos.
+
+## 28/02/17
+
+Voy a comenzar por cerrar los extremos de la cruceta que quedaron abiertos. He probado el _Proportional Editing Mode_ pero al arrastrar el resto de los vértices deforma la cruceta entera y eso no es lo deseado así que he movido los 6 vértices de cada lado cambiando sus coordenadas Z e Y a 0. Pero queda demasiado plano así que tras esto he alargado en el eje X estos vértices para que acabe más en punta.
+
+Una vez contento con el resultado es necesario unir la cruceta al filo, para ello he seguido el siguiente [tutorial](https://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/Putting_Hat_on_Person). En lugar de establecer relación de parentesco he unido los objetos en uno solo con la operación join.
+
+Para crear el pico que sale desde la cruceta hasta el filo he subdividido la arista que va desde el biselado del filo al final donde se une con la cruceta y en la subarista más cercana a la cruceta he creado un biselado de offset 1, 7 segmentos y perfil 1.
+
+Para hacer la empuñadura he utilizado la técnica del perfil de revolución otra vez, una vez hecho uno de los 7 arcos he utilizado la operación _Duplicate_ para generar el resto respetando las mismas proporciones, el resultado es el siguiente perfil:
+
+![Imagen perfil revolución empuñadura](doc_imgs/PerfilRevoluciónEmpuñadura.png "Imagen perfil revolución empuñadura")
+
+Usando la operación _Spin_ se genera el siguiente objeto:
+
+![Imagen empuñadura](doc_imgs/Empuñadura.png "Imagen empuñadura")
+
+Una vez acabada la empuñadura la paso a la capa 1 y la uno al objeto filo y cruceta ajustando el tamaño con la operación _Scale_.
+
+Para hacer el pomo repito la técnica de generarlo por revolución y al acabarlo lo uno con lo que ya tenia ajustando el tamaño con la operación _Scale_ otra vez con lo que ya están todas las partes de la espada generadas y ensambladas. El resultado final se puede apreciar en la siguiente imagen:
+
+![Imagen espada final](doc_imgs/Espada final.png "Imagen espada final")
