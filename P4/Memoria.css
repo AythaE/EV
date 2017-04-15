@@ -1,0 +1,19 @@
+@media print {
+    a[href]:after {
+        content: "" !important;
+    }
+
+    abbr[title]:after {
+        content: " " !important;
+    }
+    body {
+        font-size: 0.625em;
+    }
+    table {
+        width: auto;
+        margin: auto;
+    }
+    .control {
+        text-align: right;
+    }
+}
