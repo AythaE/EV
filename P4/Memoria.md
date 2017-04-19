@@ -18,7 +18,7 @@ A modo general comentar que para observar el entorno virtual hay que entrar el m
 - Controladores: Combinan las señales de los sensores para mandarlas a los actuadores que producen el movimientos
 - Actuadores: Modifican el modelo o el sistema cambiando parámetros como la posición, rotación...
 
-Hay que comentar también que durante la creación de este entorno virtual se encontraron diversos problemas debido a la jerarquía del modelo y es que diversas partes sufrían transformaciones no esperadas (los segmentos de una pierna se separaban al moverla). Por ello para asegurarse de que todo va según lo esperado es necesario aplicar las rotaciones y escalados actuales para que Blender las tome como valor inicial, para hacer esto seleccionamos un objeto y todos sus hijos (en mi caso todo el avatar) y seleccionamos _Object_ > _Apply_ > _Rotation & Scale_.
+Hay que comentar también que durante la creación de este entorno virtual se encontraron diversos problemas debido a la jerarquía del modelo y es que diversas partes sufrían transformaciones no esperadas (p.e. los segmentos de una pierna se separaban al moverla). Por ello para asegurarse de que todo va según lo esperado es necesario aplicar las rotaciones y escalados actuales para que Blender las tome como valor inicial, para hacer esto seleccionamos un objeto y todos sus hijos (en mi caso todo el avatar) y seleccionamos _Object_ > _Apply_ > _Rotation & Scale_.
 
 Además para aplicar movimiento a un objeto hay que cambiar su comportamiento a sólido rígido, por ello cambio el comportamiento de todo el avatar, esto se puede hacer desde la ventana _Properties_ en la pestaña _Physics_. Junto a esto será necesario cambiar la gravedad del mundo a 0 para que el objeto no se "caiga" hacia abajo, esto se realiza desde la ventana _Properties_ en la pestaña _World_.
 
@@ -124,4 +124,4 @@ Voy a recordar todos los movimientos implementados así como sus controles a mod
   </tbody>
 </table>
 
-Como a diferencia de las otras prácticas, el resultado final no es un nuevo modelo si no un entorno interactivo con el modelo, en lugar de enseñar una imagen del modelo final aporto una pequeña demostración de funcionamiento en el fichero `Demo.ogv` adjunto a esta memoria.
+Como a diferencia de las otras prácticas, el resultado final no es un nuevo modelo si no un entorno interactivo con el modelo, en lugar de enseñar una imagen del modelo final aporto una pequeña demostración de funcionamiento en el fichero `Demo.avi` adjunto a esta memoria.
